@@ -1,4 +1,4 @@
-import { Helper, IdentityServiceApi, ScenarioServiceApi, WWTPDomainApi,ModelDriverApi,IoTServiceApi,DigitalTwinApi,ComputeApi } from '@dhicn/domain-paas-sdk-ts'
+import { Helper, IdentityServiceApi, ScenarioServiceApi, WWTPDomainApi,ModelDriverApi,IoTServiceApi } from '@dhicn/domain-paas-sdk-ts'
 import { DomainServiceUrlMap } from '@dhicn/domain-paas-sdk-ts/src/sdk-helper'
 
 export class ApiHelperExtend extends Helper.ApiHelper {

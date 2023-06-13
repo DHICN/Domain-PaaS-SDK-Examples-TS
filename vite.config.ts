@@ -27,6 +27,10 @@ export default defineConfig({
         target: "http://172.23.21.148:10000", 
         changeOrigin: true,
       },
+      "/identity-service": {
+        target: "http://172.23.21.148:10000", 
+        changeOrigin: true,
+      }
     },
   },
 })
