@@ -5,7 +5,7 @@ import { setToken, userLogin } from '../main';
 const apiHelper = new ApiHelperExtend()
 
 /**
- * 获取加药参数
+ * 获取碳源加药
  */
 export const getDosingParamete = async() => {
   const userInfo = await userLogin()

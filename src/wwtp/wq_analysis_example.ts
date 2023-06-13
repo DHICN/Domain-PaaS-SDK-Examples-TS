@@ -4,9 +4,9 @@ import { setToken, userLogin } from '../main';
 const apiHelper = new ApiHelperExtend()
 
 /**
- * 获取全流程水质数据
+ * 获取微生物生长模拟结果
  */
-export const getWholeProcessWaterQuality = async () => {
+export const getWqAnalysisMicroOrganism = async () => {
   const userInfo = await userLogin()
   const options = await setToken(userInfo.tenantId,userInfo.token)
 
