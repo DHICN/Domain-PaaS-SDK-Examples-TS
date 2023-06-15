@@ -5,12 +5,12 @@ import { calculationScenario, crerateScnearioByGroup, queryCalculatingProgress, 
 import { getWqAnalysisMicroOrganism } from './wwtp/wq_analysis_example';
 import { getWholeProcessWaterQuality } from './wwtp/general_data_example';
 
-const tenantId='3a07fc5a-e2cc-2136-6969-0e1f1ad4205f'
-const clientId='IdentityServer_App'
-const grantType='password'
-const clientSecret='955q2w3e*'
-const username='bztest1'
-const password='955555=hot'
+const tenantId:string='3a07fc5a-e2cc-2136-6969-0e1f1ad4205f'
+const clientId:string='IdentityServer_App'
+const grantType:string='password'
+const clientSecret:string='955q2w3e*'
+const username:string='bztest1'
+const password:string='955555=hot'
 
 const tokenHelper = new ApiHelper()
 
@@ -43,6 +43,17 @@ return options
 }
 
 
+
+/**
+ * 全开放性决策数据中心
+ */
+getWqAnalysisMicroOrganism()
+
+/**
+ * 智能反硝化碳源加药
+ */
+getDosingParamete()
+
 /**
  * 工艺模拟实验室
  */
@@ -55,17 +66,9 @@ queryScenarioOutLetResult();
 /**
  * 水质模拟预测分析
  */
-getWqAnalysisMicroOrganism()
-
-/**
- * 获取全流程水质数据
- */
 getWholeProcessWaterQuality()
 
-/**
- * 获取加药参数
- */
-getDosingParamete()
+
 
 
 

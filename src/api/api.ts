@@ -7,6 +7,7 @@ export class ApiHelperExtend extends Helper.ApiHelper {
   ProNumSimLabApi:WWTPDomainApi.ProNumSimLabApi
   IntelligentDenitrificationApi:WWTPDomainApi.IntelligentDenitrificationApi
   GeneralDataApi:WWTPDomainApi.GeneralDataApi
+  WQAnalysisApi:WWTPDomainApi.WQAnalysisApi
   ModelRunApi:ModelDriverApi.ModelRunApi
   TelemetryApi:IoTServiceApi.TelemetryApi
   OpcuaApi:IoTServiceApi.OpcuaApi
@@ -27,6 +28,10 @@ export class ApiHelperExtend extends Helper.ApiHelper {
       this.axiosInstance,
     )
     this.IntelligentDenitrificationApi = new WWTPDomainApi.IntelligentDenitrificationApi(
+      DomainServiceUrlMap.wwtp.mainBus,
+      this.axiosInstance,
+    )
+    this.WQAnalysisApi = new WWTPDomainApi.WQAnalysisApi(
       DomainServiceUrlMap.wwtp.mainBus,
       this.axiosInstance,
     )

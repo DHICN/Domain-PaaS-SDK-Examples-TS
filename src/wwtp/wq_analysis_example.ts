@@ -16,7 +16,7 @@ export const getWqAnalysisMicroOrganism = async () => {
   const endTime:string='2023-06-05T00:00:00'
   const modelName:string='在线滚动模型'
   // 接口调用
-  const result = await apiHelper.GeneralDataApi.apiV2OutputEntireProcessTsByProductlineGet(productLine, startTime, endTime, modelName,options)
+  const result = await apiHelper.WQAnalysisApi.v2WqAnalysisMicroOrganismGet(productLine, startTime, endTime, modelName,options)
   // 接口返回
   console.log(result.data);
 }
