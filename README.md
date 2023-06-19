@@ -19,4 +19,4 @@ wwtp中是一些sdk的使用示例，可供参考
 参考 wwtp/intelligent_denitrification_example.ts
 
 • 工艺模拟实验室
-参考 wwtp/ 参考 wwtp/process_simulation_lab_example.ts
+参考 wwtp/process_simulation_lab_example.ts
