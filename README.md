@@ -4,7 +4,7 @@
 如需试用，请联系我们 [DHI 中国 业务中台](https://online-products.dhichina.cn/) 获取使用许可和认证信息。
 
 ## 安装SDK包
-npm install domain-paas-sdk-python
+npm install @dhicn/domain-paas-sdk-ts
 
 ## 示例
 wwtp中是一些sdk的使用示例，可供参考
