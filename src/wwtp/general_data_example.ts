@@ -7,8 +7,8 @@ const apiHelper = new ApiHelperExtend()
  * 获取全流程水质数据
  */
 export const getWholeProcessWaterQuality = async () => {
-  const userInfo = await userLogin()
-  const options = await setToken(userInfo.tenantId,userInfo.token)
+  const getToken = await userLogin()
+  const options = await setToken(getToken)
 
   // 接口参数
   const productLine:string='1A'

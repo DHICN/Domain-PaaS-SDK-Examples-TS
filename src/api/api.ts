@@ -1,6 +1,5 @@
 import { Helper, IdentityServiceApi, ScenarioServiceApi, WWTPDomainApi,ModelDriverApi,IoTServiceApi } from '@dhicn/domain-paas-sdk-ts'
 import { DomainServiceUrlMap } from '@dhicn/domain-paas-sdk-ts/src/sdk-helper'
-
 export class ApiHelperExtend extends Helper.ApiHelper {
   usersMnangerApi: IdentityServiceApi.UsersMnangerApi
   scenarioManagerApi: ScenarioServiceApi.ScenarioManagerApi

@@ -5,37 +5,31 @@ import { calculationScenario, crerateScnearioByGroup, queryCalculatingProgress, 
 import { getWqAnalysisMicroOrganism } from './wwtp/wq_analysis_example';
 import { getWholeProcessWaterQuality } from './wwtp/general_data_example';
 
-const tenantId:string='3a07fc5a-e2cc-2136-6969-0e1f1ad4205f'
-const clientId:string='IdentityServer_App'
-const grantType:string='password'
-const clientSecret:string='955q2w3e*'
-const username:string='bztest1'
-const password:string='955555=hot'
-
 const tokenHelper = new ApiHelper()
-
 
 /**
  * 登录
  */
 export const userLogin = async () => {
-  // 方法调用
-    await tokenHelper.logIn(tenantId,
-    clientId,
-    grantType,
-    clientSecret,
-    username,
-    password)
+    // 方法调用
+    await tokenHelper.logIn(
+    import.meta.env.VITE_TENANTID,
+    import.meta.env.VITE_CLIENT_ID,
+    import.meta.env.VITE_GRANT_TYPE,
+    import.meta.env.VITE_CLIENT_SECRET,
+    import.meta.env.VITE_USRE_NAME,
+    import.meta.env.VITE_PASSWORD
+    )
     const token = tokenHelper.apiToken as IToken
-   return {token,tenantId}
+   return token
 }
 
 /**
  * 设置token
  */
-export const setToken = async (tenantId:string,token:IToken) => {
+export const setToken = async (token:IToken) => {
  const options:AxiosRequestConfig = {headers:{
-    tenantId:tenantId,
+    tenantId:import.meta.env.VITE_TENANTID,
     Authorization:`${token.token_type} ${token.access_token}`
 }}
 

@@ -1,36 +1,32 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig, loadEnv } from 'vite'
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  base: "./",
-  plugins: [vue()],
-  server: {
-    port: 3000,
-    host: "0.0.0.0",
-    open: true,
-    cors: true,
-    proxy: {
-      "/global-scenario-manager-service/api": {
-        target: "http://172.23.21.148:10000", 
-        changeOrigin: true,
+export default defineConfig(({ command, mode }) => {
+  const env = loadEnv(mode, process.cwd(), '')
+  return {
+    // vite 配置
+    server: {
+          port: env.VITE_API_PORT,
+          host: "0.0.0.0",
+          open: true,
+          cors: true,
+          proxy: {
+          "/identity-service": {
+          target: env.VITE_API_BASE_URL, 
+          changeOrigin: true,
+          },
+          "/global-scenario-manager-service": {
+          target: env.VITE_API_BASE_URL, 
+          changeOrigin: true,
+          },
+        "/global-model-driver-service": {
+          target: env.VITE_API_BASE_URL, 
+          changeOrigin: true,
+          },
+        "/wwtp-paas-main-bus-service": {
+          target: env.VITE_API_BASE_URL, 
+          changeOrigin: true,
+        },
       },
-      "/global-model-driver-service": {
-        target: "http://172.23.21.148:10000", 
-        changeOrigin: true,
-      },
-      "/wwtp-paas-main-bus-service/api": {
-        target: "http://172.23.21.148:10000", 
-        changeOrigin: true,
-      },
-      "/iot-service/api": {
-        target: "http://172.23.21.148:10000", 
-        changeOrigin: true,
-      },
-      "/identity-service": {
-        target: "http://172.23.21.148:10000", 
-        changeOrigin: true,
-      }
     },
-  },
+  }
 })

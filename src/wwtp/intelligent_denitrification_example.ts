@@ -8,8 +8,8 @@ const apiHelper = new ApiHelperExtend()
  * 获取碳源加药
  */
 export const getDosingParamete = async() => {
-  const userInfo = await userLogin()
-  const options = await setToken(userInfo.tenantId,userInfo.token)
+  const getToken = await userLogin()
+  const options = await setToken(getToken)
 
   // 接口参数
   const category:number = 1,
